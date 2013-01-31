@@ -22,8 +22,6 @@ class PostController extends Controller
         $entities = $em->getRepository('MainBundle:Post')->findAll();
         $adapter = new ArrayAdapter($entities);
 
-        // $entities = $em->getRepository('MainBundle:Post')->createQueryBuilder();
-        // $adapter = new DoctrineORMAdapter($entities);
 
 
         $pagerfanta = new Pagerfanta($adapter);
